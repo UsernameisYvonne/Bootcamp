@@ -40,17 +40,16 @@ def convert_digit_list_into_integer(digit_list):
     # Process each and every digit in the list from left to right, one by one
     for digit in digit_list:
         # Multiply the current result by 10, shift all digits one place left (make room for the new digit)
-        result = result * 10
         # Add the current digit to the ones place
-        result = result + digit
+        result = result * 10 + digit
 
         # For example:
         # digit_list = [8, 3, 5, 1]
         # result = 0
-        # digit = 8 -> result = 0 * 10 = 0 -> result = 0 + 8 = 8
-        # digit = 3 -> result = 8 * 10 = 80 -> result = 80 + 3 = 83
-        # digit = 5 -> result = 83 * 10 = 830 -> result = 830 + 5 = 835
-        # digit = 1 -> result = 835 * 10 = 8350 -> result = 8350 + 1 = 8351
+        # digit = 8 -> result = 0 * 10 + 8 = 8
+        # digit = 3 -> result = 8 * 10 + 3 = 83
+        # digit = 5 -> result = 83 * 10 + 5 = 835
+        # digit = 1 -> result = 835 * 10 + 1 = 8351
         # result = 8351
 
     return result
